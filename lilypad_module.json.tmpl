@@ -1,0 +1,21 @@
+{
+  "machine": { "gpu": 1, "vram": 0, "cpu": 8000, "ram": 16000 },
+  "job": {
+    "APIVersion": "V1beta1",
+    "Spec": {
+      "Deal": { "Concurrency": 1 },
+      "Docker": {
+        "Entrypoint": [
+          "/app/src/run_model", {{ .request }}
+        ],
+        "Image": "lilypadnetwork/deepscaler-1.5b@sha256:1d023a8e45b822a48456d3729eae87b218d929b1ffc291581f1e8a44a84e0bf3"
+      },
+      "Engine": "Docker",
+      "Network": { "Type": "None" },
+      "Outputs": [{ "Name": "outputs", "Path": "/outputs" }],
+      "Resources": { "GPU": "1", "CPU": "8", "Memory": "16Gb" },
+      "Timeout": 1800,
+      "Verifier": "Noop"
+    }
+  }
+}

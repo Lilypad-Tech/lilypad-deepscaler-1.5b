@@ -5,7 +5,7 @@ Run [DeepScaleR 1.5B](https://ollama.com/library/deepscaler) on Lilypad Network.
 ## Getting Started
 
 ```bash
-lilypad run github.com/Lilypad-Tech/lilypad-deepscaler:6a8675a15f56b0792ada4646a6df5a49867929e9 \
+lilypad run github.com/Lilypad-Tech/lilypad-deepscaler-1.5b:cf7b7d6a75e8fc6b0bf2ed9b016d50bb74112a70 \
 -i request="$(echo -n '{
   "model": "deepscaler:1.5b",
   "messages": [{
